@@ -7,9 +7,6 @@ import MyComponent from "./MyComponent"
 const App = () => (
 <ThemeProvider theme={theme}>
   <CssBaseline />
-  <div>
-    <p>A bare bones application!</p>
-  </div>
   <MyComponent />
 </ThemeProvider>
 )

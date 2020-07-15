@@ -1,5 +1,14 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/styles'
+import {
+    Card,
+    CardActionArea,
+    CardMedia,
+    CardContent,
+    Typography,
+    CardActions,
+    Button
+} from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -16,10 +25,34 @@ const useStyles = makeStyles(theme => ({
 
 const MyComponent = () => {
 
-	const classes = useStyles()
+    const classes = useStyles()
 
     return (
-        <p>I am a MyComponent!</p>
+        <Card className={classes.root}>
+            <CardActionArea>
+                <CardMedia
+                    className={classes.media}
+                    image="/radio4.jpg"
+                    title="Me at BBC Radio4"
+                >
+                </CardMedia>
+                <CardContent>
+                    <Typography>
+                        Andrew Owen Martin
+                    </Typography>
+                    <Typography>
+                        In April 2015 I was asked on BBC Radio 4's Today programme to discuss if an algorithm could run the government.
+                    </Typography>
+                </CardContent>
+            </CardActionArea>
+            <CardActions>
+                <Button
+                    href="//www.aomartin.co.uk/"
+                >
+                    Go to my website
+                </Button>
+            </CardActions>
+        </Card>
     )
 }
 
